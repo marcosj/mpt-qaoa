@@ -1,128 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanguard Challenge - Multi-Asset Portfolio Construction</title>
-
-    <!-- Reveal.js CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <meta charset="UTF-8">
+    <title>Multi-Asset Portfolio Construction</title>
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Code syntax highlighting style -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
-
-    <style>
-        .reveal img {
-            max-height: 70vh;
-            width: auto;
-            margin: 0 auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        }
-        .reveal h2, .reveal h3 {
-            text-transform: none;
-        }
-        .reveal figure {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
-<div class="sticky-nav">
-    <a href="../index.html" class="btn">↩ ⌂ Home</a>
-</div>
-
-    <div class="reveal">
-        <div class="slides">
-
-            <!-- Title Slide -->
-            <section>
-                <h2>Vanguard Challenge</h2>
-                <h3>Multi-Asset Portfolio Construction</h3>
-                <br>
-                <h5 style="text-align: right;">Marcos Jiménez</h5>
-            </section>
-
-            <!-- Slide 1: Parameters -->
-            <section>
-                <h3>Portfolio Parameters</h3>
-                <figure>
-                    <img src="img/vars.png" alt="Parameters Table">
-                </figure>
-            </section>
-
-            <!-- Slide 2: Mathematical Formulation -->
-            <section>
-                <h3>Modern Portfolio Theory Formulation</h3>
-                <figure>
-                    <img src="img/math.png" alt="Mathematical Formulation">
-                </figure>
-            </section>
-
-            <!-- Slide 3: QUBO Formulation -->
-            <section>
-                <h3>QUBO Matrix & Cost Hamiltonian</h3>
-                <figure>
-                    <img src="img/qubo.png" alt="QUBO Formulation">
-                </figure>
-            </section>
-
-            <!-- Slide 4: Ising Mapping -->
-            <section>
-                <h3>Ising Spin Glass Conversion</h3>
-                <figure>
-                    <img src="img/ising.png" alt="Ising Mapping">
-                </figure>
-            </section>
-
-            <!-- Slide 5: QAOA Circuit -->
-            <section>
-                <h3>QAOA Optimization Loop</h3>
-                <figure>
-                    <img src="img/qaoa.png" alt="QAOA Optimization Architecture">
-                </figure>
-            </section>
-
-            <!-- Slide 6: Results & Diagnostics Summary (Markdown Example) -->
-            <section data-markdown>
-                <textarea data-template>
-### Diagnostic Summary
-
-* **Classical Baseline:** Brute-force 2^10 state evaluation identified K=4 ground state due to QUBO penalty scaling.
-* **Quantum Optimization:** QAOA (p=2) converged monotonically from cost +162.25 to -29.46.
-* **Next Steps:** Rebalance penalty ratio P_div > P_sec or implement an XY Ring Mixer to conserve particle number sum x_i = 3.
-                </textarea>
-            </section>
-
-        </div>
+    <div class="sticky-nav">
+        <a href="../index.html" class="btn">↩ 🏠</a>
     </div>
-
-    <!-- Reveal.js & Plugins via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
-
-    <script>
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            center: true,
-            hash: true,
-
-            // Register plugins
-            plugins: [ RevealMarkdown, RevealMath.MathJax3, RevealHighlight ],
-
-            // MathJax3 Configuration
-            mathjax3: {
-                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
-                tex: {
-                    inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            }
-        });
-    </script>
+    <a href="https://github.com/marcosj/mpt-qaoa" class="card-link" target="_blank">View Repository on GitHub →</a>
+    <div class="presentation-container">
+        <iframe src="pres.html" title="Vanguard Challenge Presentation">
+            <p>Your browser does not support embedded frames. You can view the presentation directly <a href="presentation.html" target="_blank">here</a>.</p>
+        </iframe>
+    </div>
 </body>
 </html>
